@@ -5,5 +5,19 @@
 You are visiting the homepage.
 
 <!-- TODO: Display a list of users here, with each linking to their profile -->
+<table>
+    <tr>
+        <th>#</th>
+        <th>name</th>
+        <th>link</th>
+    </tr>
+    <tr>
+        {% for user in users %}
+            <td>{{user.id}}</td>
+            <td>{{user.username}}</td>
+            <td><a href="/profile/{{user.username}}">Link</a></td>
+        {% endfor %}
+    </tr>
+</table>
 
 {% endblock %}
